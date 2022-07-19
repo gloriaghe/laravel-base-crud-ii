@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::resource('/comics', 'ComicsController');
+
+Route::get('/admin', 'AdminController@home')->name('admin.home');
