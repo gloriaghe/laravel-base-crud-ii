@@ -3,6 +3,8 @@
 @section('mainContent')
 
 <h1 id="titleForm">Modifica il Fumetto:</h1>
+<button class="link_admin"><a href="{{ route('admin.home')}}">Torna alla tabella dei fumetti</a></button>
+
 
 <form action="{{ route('comics.update', ['comic' => $comic]) }}" method="post">
     @method('PUT')
@@ -78,6 +80,6 @@
     <form action="{{ route('comics.destroy', ['comic' => $comic]) }}" method="post">
         @csrf
         @method('DELETE')
-        <button type="submit" onclick="return confirm('Sei sicuro di volerlo cancellare?')" >Delete</button>
+        <button class="btDelete" type="submit" onclick="return confirm('Sei sicuro di volerlo cancellare?')" >Delete</button>
     </form>
 @endsection
