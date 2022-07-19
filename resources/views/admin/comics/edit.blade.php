@@ -2,7 +2,7 @@
 
 @section('mainContent')
 
-<h1>Modifica:</h1>
+<h1 id="titleForm">Modifica il Fumetto:</h1>
 
 <form action="{{ route('comics.update', ['comic' => $comic]) }}" method="post">
     @method('PUT')
@@ -72,6 +72,12 @@
         @enderror
     </div>
 
-    <button>Save</button>
+    <button>Modifica</button>
 </form>
+
+    <form action="{{ route('comics.destroy', ['comic' => $comic]) }}" method="post">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
 @endsection
