@@ -2,49 +2,51 @@
 
 @section('mainContent')
 <h1 id="titleForm">Fumetti</h1>
-<table>
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>title</th>
-            <th>description</th>
-            <th>thumb</th>
-            <th>price</th>
-            <th>series</th>
-            <th>sale_date</th>
-            <th>type</th>
+<button class="link_admin"><a href="{{ route('comics.create')}}">INSERISCI UN NUOVO FUMETTO</a></button>
+<section id="tableAdmin">
 
-            <th colspan="3">Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($comics as $comic)
-            <tr>
-                <td>{{ $comic->id }}</td>
-                <td>{{ $comic->title }}</td>
-                <td>{{ $comic->description }}</td>
-                <td>{{ $comic->thumb }}</td>
-                <td>{{ $comic->price }}</td>
-                <td>{{ $comic->series }}</td>
-                <td>{{ $comic->sale_date }}</td>
-                <td>{{ $comic->sale_dtypeate }}</td>
+    <div class="riga" id="title">
+        <span>Id</span>
+        <span>title</span>
+        <span class="description">description</span>
+        <span>thumb</span>
+        <span>price</span>
+        <span>series</span>
+        <span>sale_date</span>
+        <span>type</span>
+        <span >Visualizza</span>
+        <span>Modifica</span>
+        <span>Cancella</span>
+    </div>
 
-                <td>
-                    <a href="{{ route('comics.show', ['comic' => $comic]) }}">Visualizza</a>
-                </td>
-                <td>
-                    <a href="{{ route('comics.edit', ['comic' => $comic]) }}">Modifica</a>
-                </td>
-                <td>
-                    <form action="{{ route('comics.destroy', ['comic' => $comic]) }}" method="post">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit">Cancella</button>
-                    </form>
-                </td>
-            </tr>
-        @endforeach
-    </tbody>
-</table>
+
+    @foreach ($comics as $comic)
+        <div class="riga">
+            <span>{{ $comic->id }}</span>
+            <span>{{ $comic->title }}</span>
+            <span class="description">{{ $comic->description }}</span>
+            <span>{{ $comic->thumb }}</span>
+            <span>{{ $comic->price }}</span>
+            <span>{{ $comic->series }}</span>
+            <span>{{ $comic->sale_date }}</span>
+            <span>{{ $comic->sale_dtypeate }}</span>
+
+            <span>
+                <a href="{{ route('comics.show', ['comic' => $comic]) }}">Visualizza</a>
+            </span>
+            <span>
+                <a href="{{ route('comics.edit', ['comic' => $comic]) }}">Modifica</a>
+            </span>
+            <span>
+                <form action="{{ route('comics.destroy', ['comic' => $comic]) }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit"  onclick="return confirm('Sei sicuro di volerlo cancellare?')">Cancella</button>
+                </form>
+            </span>
+        </div>
+    @endforeach
+
+</section>
 
 @endsection

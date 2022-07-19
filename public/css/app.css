@@ -347,6 +347,46 @@ form button {
   margin-top: 20px;
 }
 
+.link_admin {
+  background-color: #0084ac;
+  font-size: 20px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  margin: 20px auto;
+  width: 300px;
+}
+.link_admin a {
+  color: white;
+  text-decoration: none;
+}
+
+#tableAdmin {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 30px;
+}
+#tableAdmin .riga {
+  display: flex;
+}
+#tableAdmin .riga span {
+  min-width: 200px;
+  border: 1px solid black;
+  padding: 10px 10px;
+  overflow: auto;
+}
+#tableAdmin .riga span.description {
+  min-width: 500px;
+}
+#tableAdmin .riga form {
+  width: 200px;
+}
+#tableAdmin #title {
+  text-transform: uppercase;
+  color: blue;
+}
+
 * {
   margin: 0;
   padding: 0;

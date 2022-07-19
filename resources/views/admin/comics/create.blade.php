@@ -2,6 +2,8 @@
 
 @section('mainContent')
     <h1 id="titleForm">Insert New Comic:</h1>
+    <button class="link_admin"><a href="{{ route('admin.home')}}">Torna alla tabella dei fumetti</a></button>
+
 
     <form action="{{ route('comics.store') }}" method="post">
         @csrf
