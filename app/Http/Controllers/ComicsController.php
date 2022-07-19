@@ -26,7 +26,7 @@ class ComicsController extends Controller
     {
         $request->validate([
             'title'         => 'required|string|max:255',
-            'description'   => 'required|string|max:255',
+            'description'   => 'required|string',
             'thumb'         => 'required|url',
             'price'         => 'numeric',
             'series'        => 'required|string|max:255',
@@ -70,6 +70,16 @@ class ComicsController extends Controller
 
     public function update(Request $request, Comic $comic)
     {
+        $request->validate([
+            'title'         => 'required|string|max:255',
+            'description'   => 'required|string',
+            'thumb'         => 'required|url',
+            'price'         => 'numeric',
+            'series'        => 'required|string|max:255',
+            'sale_date'     => 'date',
+            'type'          => 'required|string|max:255',
+        ]);
+
         $formData = $request->all();
         $comic->update($formData); //(se abbiamo definito $fillable nel model)
 
