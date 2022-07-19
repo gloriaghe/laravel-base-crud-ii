@@ -78,6 +78,6 @@
     <form action="{{ route('comics.destroy', ['comic' => $comic]) }}" method="post">
         @csrf
         @method('DELETE')
-        <button type="submit" class="btn btn-danger">Delete</button>
+        <button type="submit" class="btn btn-danger" onclick="return confirm('Sei sicuro di volerlo cancellare?')" >Delete</button>
     </form>
 @endsection
