@@ -33,11 +33,27 @@
             &.description {
                 min-width: 500px;
             }
+            &:last-child .bt{
+               background-color: red;
+            }
+            .bt{
+                background-color: #0c7cec;
+                font-size: 20px;
+                padding: 5px 5px;
+                border-radius: 10px;
+                border: none;
+                margin-top: 20px;
+                .linkModify{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+            form {
+                width: 200px;
+            }
         }
 
-        form {
-            width: 200px;
-        }
+
     }
 
     #title {

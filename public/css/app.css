@@ -379,7 +379,22 @@ form button {
 #tableAdmin .riga span.description {
   min-width: 500px;
 }
-#tableAdmin .riga form {
+#tableAdmin .riga span:last-child .bt {
+  background-color: red;
+}
+#tableAdmin .riga span .bt {
+  background-color: #0c7cec;
+  font-size: 20px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+}
+#tableAdmin .riga span .bt .linkModify {
+  color: white;
+  text-decoration: none;
+}
+#tableAdmin .riga span form {
   width: 200px;
 }
 #tableAdmin #title {

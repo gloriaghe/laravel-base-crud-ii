@@ -32,16 +32,21 @@
             <span>{{ $comic->sale_dtypeate }}</span>
 
             <span>
-                <a href="{{ route('comics.show', ['comic' => $comic]) }}">Visualizza</a>
+                <button class="bt">
+                    <a class="linkModify" href="{{ route('comics.show', ['comic' => $comic]) }}">VISUALIZZA</a>
+                </button>
+
             </span>
             <span>
-                <a href="{{ route('comics.edit', ['comic' => $comic]) }}">Modifica</a>
+                <button class="bt">
+                    <a class="linkModify" href="{{ route('comics.edit', ['comic' => $comic]) }}">MODIFICA</a>
+                </button>
             </span>
             <span>
                 <form action="{{ route('comics.destroy', ['comic' => $comic]) }}" method="post">
                     @csrf
                     @method('DELETE')
-                    <button type="submit"  onclick="return confirm('Sei sicuro di volerlo cancellare?')">Cancella</button>
+                    <button class="bt" type="submit"  onclick="return confirm('Sei sicuro di volerlo cancellare?')">CANCELLA</button>
                 </form>
             </span>
         </div>
