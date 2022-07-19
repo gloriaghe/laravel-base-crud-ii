@@ -1,0 +1,225 @@
+#blueBar{
+    background-color: #0282f9;
+    width: 100%;
+    height: 80px;
+    position: relative;
+
+    #cardSingle{
+        width: 200px;
+        height: 300px;
+        position: absolute;
+        bottom: 25px;
+        left: 12.5%;
+        border: 1px solid white;
+
+        #imgCard{
+            object-fit: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .aCard{
+            position: absolute;
+            left: 0;
+            background-color: #00a9d9;
+            padding: 5px 5px;
+            text-decoration: none;
+            font-size: 13px;
+            color: white;
+        }
+
+        #comicCard{
+            top: 0;
+        }
+
+        #viewCard{
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+
+
+}
+
+
+#cardPage{
+    margin: 70px 0;
+
+    #sectionPresentation{
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        text-align: start;
+
+        #text{
+            width: 70%;
+
+            h1{
+                text-transform: uppercase;
+                margin-bottom: 15px;
+                color: #003f5e;
+                font-size: 30px;
+            }
+
+            #greenbar{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 50px;
+                background-color: #55ba59;
+                color: white;
+                margin-bottom: 15px;
+
+                .green{
+                    padding: 0 20px;
+                    border: 1px solid gray;
+                    display: flex;
+                    align-items: center;
+                    font-size: 15px;
+                    font-weight: bolder;
+
+                    &#green1{
+                        width: 70%;
+                        height: 100%;
+                        justify-content: space-between;
+                    }
+
+                    &#green2{
+                        width: 30%;
+                        height: 100%;
+                        justify-content: center;
+                    }
+                    .greenlight{
+                        color: #a3fd9c;
+                    }
+                }
+
+            }
+
+            p{
+                color: #555555;
+                line-height: 25px;
+                margin-bottom: 80px;
+            }
+        }
+
+        #publicity{
+            width:30%;
+            text-align: end;
+
+            h3{
+                color: #555555;
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    #sectionData{
+        border: 1px solid #d4cfcf;
+
+        #sectionDatabox{
+            width: 75%;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-between;
+
+            .data{
+                width: 50%;
+                text-align: start;
+
+
+                &:last-child{
+                    padding-left: 30px;
+                }
+
+
+                h2{
+                    color: #003f5e;
+                    padding-bottom: 20px;
+                    font-size: 20px;
+                    border-bottom: 1px solid #d4cfcf;
+
+                }
+
+                .boxSingledate{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 15px 0;
+                    font-size: 13px;
+                    border-bottom: 1px solid #d4cfcf;
+
+                    h4{
+                        width: 35%;
+                        color: rgb(109, 102, 102);
+                    }
+
+                    .lightblue{
+                        width: 65%;
+                        color: #00a9d9;
+                    }
+
+                    .green{
+                        width: 65%;
+                        color: #3f3f3f;
+                    }
+                }
+            }
+
+        }
+
+
+    }
+
+    }
+
+    #icon{
+        border-top: 1px solid #d4cfcf;
+
+
+        #containerBuys {
+            width: 75%;
+            margin: 0 auto;
+            @include my-flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            div {
+                width: 25%;
+                @include my-flex;
+                justify-content: center;
+                border-left: 1px solid #d4cfcf;
+                border-right: 1px solid #d4cfcf;
+
+
+                a {
+                    color: #a4a69f;
+                    text-decoration: none;
+                    margin: 20px 0;
+                    @include my-flex;
+                    align-items: center;
+                    font-size: 15px;
+
+                    img {
+                        width: 80px;
+                        padding: 0 15px;
+
+
+                    }
+                }
+
+                @media screen and (max-width: $small ) {
+                    & {
+                        width: 50%;
+                    }
+                }
+            }
+
+
+
+        }
+    }

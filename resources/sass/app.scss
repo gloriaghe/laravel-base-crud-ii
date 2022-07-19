@@ -1,0 +1,172 @@
+//
+@import 'partials/_footer', 'partials/_header', 'partials/_comic', 'partials/form';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$medium: 1400px;
+$small: 1000px;
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @mixin my-flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    ;
+
+    #jumbo {
+        background-image: url(../images/jumbotron.jpg);
+        background-size: cover;
+        height: 400px;
+    }
+
+    #card {
+        background-color: #1c1c1c;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 30px;
+
+
+
+        #containerCard {
+            display: flex;
+            flex-wrap: wrap;
+            width: 75%;
+            margin: 0 auto;
+            position: relative;
+
+
+            #title {
+                background-color: #0282f9;
+                padding: 15px 20px;
+                position: absolute;
+                top: -60px;
+                left: 20px;
+                font-size: 22px;
+                font-weight: bolder;
+                cursor: pointer;
+            }
+
+
+            a {
+                flex-basis: 15%;
+                padding: 30px 0;
+                text-decoration: none;
+                color: white;
+
+                &:hover img {
+                    opacity: 60%;
+                }
+
+                img {
+                    width: 80%;
+                    max-height: 180px;
+                    object-fit: cover;
+                    object-position: top;
+
+
+                }
+
+                span {
+                    display: block;
+                    width: 80%;
+                    text-align: start;
+                    text-transform: uppercase;
+                    margin-top: 15px;
+                    margin-left: 25px;
+                    font-size: 15px;
+                }
+
+            }
+
+            @media screen and (max-width: $medium ) {
+                a {
+                    flex-basis: 20%;
+                }
+            }
+
+            @media screen and (max-width: $small ) {
+                a {
+                    flex-basis: 25%;
+                }
+            }
+
+        }
+
+        button {
+            background-color: #0282f9;
+            align-self: center;
+            padding: 12px 40px;
+            margin: 20px;
+            border: none;
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: bolder;
+
+            }
+
+        }
+
+    }
+
+
+
+
+    #link {
+        background-color: #0282f9;
+        @include my-flex;
+        justify-content: center;
+
+        #containerBuy {
+            // width: 75%;
+            @include my-flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            div {
+                width: 20%;
+                @include my-flex;
+                justify-content: center;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    margin: 40px 0;
+                    @include my-flex;
+                    align-items: center;
+                    font-size: 15px;
+
+                    img {
+                        width: 80px;
+                        padding: 0 15px;
+                    }
+                }
+
+                @media screen and (max-width: $small ) {
+                    & {
+                        width: 30%;
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}
+

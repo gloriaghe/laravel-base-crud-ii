@@ -1,0 +1,477 @@
+#sectionFooter {
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#sectionFooter #linkFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+  height: 350px;
+  overflow: hidden;
+}
+#sectionFooter #linkFooter section {
+  margin-top: 30px;
+}
+#sectionFooter #linkFooter section h3 {
+  color: white;
+  text-align: start;
+}
+#sectionFooter #linkFooter section ul {
+  list-style-type: none;
+  margin: 20px 0;
+}
+#sectionFooter #linkFooter section ul li {
+  text-align: start;
+}
+#sectionFooter #linkFooter section ul li a {
+  text-decoration: none;
+  color: grey;
+  font-weight: bold;
+  font-size: 15px;
+}
+#sectionFooter #logo {
+  width: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-top: -40px;
+  margin-bottom: -40px;
+}
+
+#navFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #303030;
+  height: 130px;
+  width: 100%;
+}
+#navFooter div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+}
+#navFooter div button {
+  background-color: #303030;
+  border: 2px solid #0282f9;
+  padding: 15px;
+}
+#navFooter div a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+#navFooter div #social {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#navFooter div #social #follow {
+  color: #0282f9;
+  font-size: 20px;
+  font-weight: bold;
+}
+@media screen and (max-width: 1100px) {
+  #navFooter div #social {
+    width: 50%;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 130px;
+}
+header section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+}
+header section img {
+  width: 80px;
+}
+header section ul {
+  list-style-type: none;
+  margin: 20px 0;
+}
+header section ul li {
+  display: inline-block;
+  padding: 10px;
+}
+header section ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
+header section ul li a.here {
+  border-bottom: 4px solid #53b0f0;
+  padding-bottom: 55px;
+  color: #53b0f0;
+}
+@media screen and (max-width: 1200px) {
+  header section ul li a.here {
+    padding-bottom: 15px;
+  }
+}
+header section ul li a:hover {
+  color: #53b0f0;
+}
+
+#blueBar {
+  background-color: #0282f9;
+  width: 100%;
+  height: 80px;
+  position: relative;
+}
+#blueBar #cardSingle {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  bottom: 25px;
+  left: 12.5%;
+  border: 1px solid white;
+}
+#blueBar #cardSingle #imgCard {
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#blueBar #cardSingle .aCard {
+  position: absolute;
+  left: 0;
+  background-color: #00a9d9;
+  padding: 5px 5px;
+  text-decoration: none;
+  font-size: 13px;
+  color: white;
+}
+#blueBar #cardSingle #comicCard {
+  top: 0;
+}
+#blueBar #cardSingle #viewCard {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#cardPage {
+  margin: 70px 0;
+}
+#cardPage #sectionPresentation {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+}
+#cardPage #sectionPresentation #text {
+  width: 70%;
+}
+#cardPage #sectionPresentation #text h1 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #003f5e;
+  font-size: 30px;
+}
+#cardPage #sectionPresentation #text #greenbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  background-color: #55ba59;
+  color: white;
+  margin-bottom: 15px;
+}
+#cardPage #sectionPresentation #text #greenbar .green {
+  padding: 0 20px;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bolder;
+}
+#cardPage #sectionPresentation #text #greenbar .green#green1 {
+  width: 70%;
+  height: 100%;
+  justify-content: space-between;
+}
+#cardPage #sectionPresentation #text #greenbar .green#green2 {
+  width: 30%;
+  height: 100%;
+  justify-content: center;
+}
+#cardPage #sectionPresentation #text #greenbar .green .greenlight {
+  color: #a3fd9c;
+}
+#cardPage #sectionPresentation #text p {
+  color: #555555;
+  line-height: 25px;
+  margin-bottom: 80px;
+}
+#cardPage #sectionPresentation #publicity {
+  width: 30%;
+  text-align: end;
+}
+#cardPage #sectionPresentation #publicity h3 {
+  color: #555555;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+#cardPage #sectionData {
+  border: 1px solid #d4cfcf;
+}
+#cardPage #sectionData #sectionDatabox {
+  width: 75%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+}
+#cardPage #sectionData #sectionDatabox .data {
+  width: 50%;
+  text-align: start;
+}
+#cardPage #sectionData #sectionDatabox .data:last-child {
+  padding-left: 30px;
+}
+#cardPage #sectionData #sectionDatabox .data h2 {
+  color: #003f5e;
+  padding-bottom: 20px;
+  font-size: 20px;
+  border-bottom: 1px solid #d4cfcf;
+}
+#cardPage #sectionData #sectionDatabox .data .boxSingledate {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  font-size: 13px;
+  border-bottom: 1px solid #d4cfcf;
+}
+#cardPage #sectionData #sectionDatabox .data .boxSingledate h4 {
+  width: 35%;
+  color: rgb(109, 102, 102);
+}
+#cardPage #sectionData #sectionDatabox .data .boxSingledate .lightblue {
+  width: 65%;
+  color: #00a9d9;
+}
+#cardPage #sectionData #sectionDatabox .data .boxSingledate .green {
+  width: 65%;
+  color: #3f3f3f;
+}
+
+#icon {
+  border-top: 1px solid #d4cfcf;
+}
+#icon #containerBuys {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#icon #containerBuys div {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-left: 1px solid #d4cfcf;
+  border-right: 1px solid #d4cfcf;
+}
+#icon #containerBuys div a {
+  color: #a4a69f;
+  text-decoration: none;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 15px;
+}
+#icon #containerBuys div a img {
+  width: 80px;
+  padding: 0 15px;
+}
+@media screen and (max-width: 1100px) {
+  #icon #containerBuys div {
+    width: 50%;
+  }
+}
+
+#titleForm {
+  margin: 20px 0;
+  color: #0c7cec;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: 0 auto;
+  align-items: flex-start;
+  color: #2f91f3;
+}
+form div {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+form div label {
+  margin-right: 10px;
+}
+form div input {
+  border-radius: 5px;
+  width: 200px;
+}
+form button {
+  background-color: #0c7cec;
+  font-size: 20px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  color: white;
+  align-self: center;
+  border: none;
+  margin-top: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#app #jumbo {
+  background-image: url(../images/jumbotron.jpg);
+  background-size: cover;
+  height: 400px;
+}
+#app #card {
+  background-color: #1c1c1c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 30px;
+}
+#app #card #containerCard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  margin: 0 auto;
+  position: relative;
+}
+#app #card #containerCard #title {
+  background-color: #0282f9;
+  padding: 15px 20px;
+  position: absolute;
+  top: -60px;
+  left: 20px;
+  font-size: 22px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+#app #card #containerCard a {
+  flex-basis: 15%;
+  padding: 30px 0;
+  text-decoration: none;
+  color: white;
+}
+#app #card #containerCard a:hover img {
+  opacity: 60%;
+}
+#app #card #containerCard a img {
+  width: 80%;
+  max-height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+#app #card #containerCard a span {
+  display: block;
+  width: 80%;
+  text-align: start;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-left: 25px;
+  font-size: 15px;
+}
+@media screen and (max-width: 1400px) {
+  #app #card #containerCard a {
+    flex-basis: 20%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #app #card #containerCard a {
+    flex-basis: 25%;
+  }
+}
+#app #card button {
+  background-color: #0282f9;
+  align-self: center;
+  padding: 12px 40px;
+  margin: 20px;
+  border: none;
+}
+#app #card button a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}
+#app #link {
+  background-color: #0282f9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#app #link #containerBuy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#app #link #containerBuy div {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#app #link #containerBuy div a {
+  color: white;
+  text-decoration: none;
+  margin: 40px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 15px;
+}
+#app #link #containerBuy div a img {
+  width: 80px;
+  padding: 0 15px;
+}
+@media screen and (max-width: 1000px) {
+  #app #link #containerBuy div {
+    width: 30%;
+  }
+}

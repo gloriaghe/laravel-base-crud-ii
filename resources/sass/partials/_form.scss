@@ -1,0 +1,41 @@
+#titleForm {
+    margin: 20px 0;
+    color: #0c7cec;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 0 auto;
+    align-items: flex-start;
+    color: #2f91f3;
+
+
+    div {
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        label{
+            margin-right: 10px;
+        }
+
+        input{
+            border-radius: 5px;
+            width: 200px;
+        }
+    }
+
+    button{
+        background-color: #0c7cec;
+        font-size: 20px;
+        padding: 5px 5px;
+        border-radius: 10px;
+        color: white;
+        align-self: center;
+        border: none;
+        margin-top: 20px;
+    }
+
+}
