@@ -412,6 +412,22 @@ form button {
   box-sizing: border-box;
 }
 
+.overlay {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.overlay.none {
+  display: none;
+}
+.overlay .popup {
+  margin: auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;

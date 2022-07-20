@@ -21,7 +21,7 @@
 
 
     @foreach ($comics as $comic)
-        <div class="riga">
+        <div class="riga" data-id="{{ $comic->id }}">
             <span>{{ $comic->id }}</span>
             <span>{{ $comic->title }}</span>
             <span class="description">{{ $comic->description }}</span>
@@ -43,15 +43,27 @@
                 </button>
             </span>
             <span>
-                <form action="{{ route('comics.destroy', ['comic' => $comic]) }}" method="post">
+                <button class="bt btDelete  js-delete" type="submit" >CANCELLA</button>
+                {{-- <form action="{{ route('comics.destroy', ['comic' => $comic]) }}" method="post">
                     @csrf
                     @method('DELETE')
-                    <button class="bt btDelete" type="submit"  onclick="return confirm('Sei sicuro di volerlo cancellare?')">CANCELLA</button>
-                </form>
+                    <button class="bt btDelete  js-delete" type="submit" >CANCELLA</button>
+                </form> --}}
             </span>
         </div>
     @endforeach
 
-</section>
+    {{-- lista pagination --}}
+{{ $comics->links() }}
 
+</section>
+<section class="overlay none">
+    <form class="popup" data-action="{{ route('comics.destroy', ['comic' => '*****']) }}" method="post">
+        @csrf
+         @method('DELETE')
+        <h1>Sei sicuro?</h1>
+        <button type="submit" class="bt btDelete js-yes">YES</button>
+        <button type="button" class="bt js-no">NO</button>
+    </form>
+</section>
 @endsection

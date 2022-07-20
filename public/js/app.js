@@ -19378,7 +19378,27 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // popup delate
+
+
+var eleOverlay = document.querySelector('.overlay');
+
+if (eleOverlay) {
+  var deleteButtons = document.querySelectorAll('.js-delete');
+  var formPopup = document.querySelector('.popup');
+  deleteButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      eleOverlay.classList.remove('none');
+      var id = this.closest('[data-id]').dataset.id;
+      var pattern = formPopup.dataset.action;
+      var newAction = pattern.replace('*****', id);
+      formPopup.action = newAction;
+    });
+  });
+  document.querySelector('.js-no').addEventListener('click', function () {
+    eleOverlay.classList.add('none');
+  });
+}
 
 /***/ }),
 

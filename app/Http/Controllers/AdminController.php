@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function home() {
-        $comics = Comic::all();
+        $comics = Comic::paginate(15);
 
         return view('admin.home', compact('comics'));
     }
